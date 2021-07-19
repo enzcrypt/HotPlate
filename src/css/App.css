@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+
+
+.App {
+  margin-top: 75px;
+}
+
+.card {
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.link:hover {
+  text-decoration: none;
+  color: blue;
+}
+
+a:hover {
+  color: blue;
+}
+
+@media only screen and (min-width: 720px) {
+  .link {
+    text-align: center;
+  }
+
+}
+
+/*********chat styling starts***********/
+
+.chat{
+  font-family: 'Varela Round', sans-serif;
+}
+
+.chat-container{
+  display: flex;
+  justify-content: center;
+}
+
+.chat-b{
+  height: 56vh;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.chat-body::-webkit-scrollbar{
+  display:none;
+}
+
+.online-user-nav{
+  text-align: center;
+}
+
+.online-user-email{
+  font-size: x-small;
+  color: #010b13;
+}
+
+.online-icon {
+  border: solid 1px #d3d3d3;
+  border-radius: 50%;
+  height: 6px;
+  width: 6px;
+  background: linear-gradient(to top, #00ff00 0%, #006600 100%);
+  display: inline-block;
+}
+
+.online-icon-offline {
+  background: linear-gradient(to top, #990033 0%, #ff0000 100%)
+}
+
+.username{
+  font-size: large;
+  font-weight:bold;
+}
+
+.user-status {
+ font-size:small;
+}
+
+
+.chat-nav, .online-user-nav {
+  font-size: large;
+  background-color: #ffffff;
+}
+
+.current-user-msg, .other-user-msg {
+  overflow-wrap: break-word;
+  min-width: 5%;
+  max-width: 50%;
+  padding: 5px 15px 5px 15px;
+}
+
+.current-user-msg{
+  align-self: flex-end;
+  border-radius: 20px 20px 4px 20px;
+  background: #00b9fb;
+  color: #f5f5f5;
+}
+
+.other-user-msg {
+  align-self: flex-start;
+  border-radius: 20px 20px 20px 4px;
+  color:#010b13;
+  background: #d3d3d3;
+}
+
+.back {
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.delete {
+  margin-left: 96%;
+  cursor: pointer;
+}
+
+.message-timestamp {
+  font-size: xx-small;
+} 
+
+.chatCont .online-user :hover{
+  cursor: pointer;
+  background-color: #ff5864;
+  color: rgb(255, 255, 255);
+  opacity: 1;
+}
+
+/*********chat styling ends********/
+
+
+/*Button style expansion*/
+.btn-more-info{
+  color:#FFF;
+  background:rgb(56, 160, 42);
+}
+.btn-like{
+  color:#FFF;
+  background:rgb(0, 182, 189);
+
+}
+.btn-comment{
+  color:#FFF;
+  background:rgb(252, 153, 39);
+
+}
+/*BTN style expansion ends*/
+
+
+/*Other Post/Comment Styles*/
+.aComment *{
+    vertical-align:top;
+}
+.recipeImagePost{
+  border-radius:0.5em;
+}
+h3.recipeTitlePost{
+  font-size:140%;
+  position:absolute;
+  bottom:0;
+  left:0;
+  background:rgba(255,255,255,0.8);
+  padding:0.2em 0.5em 0.3em 0.25em;
+  border-radius: 0 0.15em 0 0;
+  margin:0;
+}
+.favouriteRecipeTitlePost{
+  font-size:225%;
+  position:absolute;
+  top:0;
+  right:0;
+  background:rgba(255, 0, 0, 0.7);
+  padding:0.25em 0.25em 0.25em 0.25em;
+  border-radius: 25px;
+  margin: 5px 5px;
+}
+.recipeShare{
+  position:relative;
+}
+.commentBox input{
+  width:100%;
+}
+.commentBox button{
+  float:right;
+}
+.commentsSection{
+  font-size:80%;
+  max-height:300px;
+  overflow-y:auto;
+}
+.comment-delete {
+  margin-left: 1em;
+  margin-top:1px;
+  cursor: pointer;
+}
+
+/* Below = scrollbar styling for comment sections */
+html {
+  --scrollbarBG: #e9e9e9;
+  --thumbBG: #007bff59;
+}
+.commentsSection .chat-body::-webkit-scrollbar {
+  width: 11px;
+}
+.commentsSection .chat-body{
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+.commentsSection .chat-body::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+.commentsSection .chat-body::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG) ;
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
+}
+.modal-backdrop {
+  background-color: rgba(0,0,0,.1) !important;
+}
+
+/*Post/Comment Styles ends*/
+
+
+.modal-90w{
+  min-width:90%;
+}
+
+.modal-90w .online-user-body{
+  width:100%;
+}
+
+.modal-90w .online-user-body .col-8{
+  max-width:50%;
+}
+
+
+/* Plate Messing */
+
+.mfPlate{
+  border-radius:100%;
+  width:15rem;
+  padding-top:15rem;
+  position:absolute;
+  top:40%;
+  left: 50%;
+  /* background:#f8f9fa; */
+  transform: translate(-50%, -50%);
+  z-index:10;
+  /* box-shadow: 0 0 10rem rgba(0,0,0,0.2); */
+}
+.mfPlate::after{
+  content:"";
+  width:60%;
+  padding-top: 60%;
+  display:block;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  /* background:rgb(255, 238, 238); */
+  background-image:url("../logopack/png-extra/extra-options/hotPlate_Logo_icon-nocutlery_gradient_fullcol_90x90.png");
+  background-size:contain;
+  border-radius:100%;
+  z-index:-1;
+}
+
+.mfPlate > div{
+  text-align: center;
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  width:100%;
+  height:100%;
+  vertical-align:middle;
+}
+
+.mfPlate > div h3{
+  display:block;
+  position:relative;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+}
+
+.mfPlate .spinnerHolder{
+  	position:relative;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width:80%;
+    height:80%;
+}
+
+.mfPlate .spinner-border{
+  width:100%;
+  height:100%;
+  border-width:0.3rem;
+  opacity:0.35;
+}
